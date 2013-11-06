@@ -1,26 +1,54 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Body Mass Index Calculator</title>
-        <script type="text/javascript" src="js/lib/jquery-1.8.1.js"></script>
-        <script type="text/javascript" src="js/lib/jquery.mobile-1.2.0-beta.1/jquery.mobile-1.2.0-beta.1.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <link rel="stylesheet" href="js/lib/jquery.mobile-1.2.0-beta.1/jquery.mobile-1.2.0-beta.1.css" />
-    </head>
-    <body>
-    	<div id="wrapper">
-    		<div id="calculator">
-    			<form name="bmi">
-    			<input type="number" name="weight" />
-    			<select name="weight-unit"><option>kg</option><option>lb</option><option>st</option></select>
-    			<input type="number" name="height" />
-    			<select name="height-unit"><option>m</option><option>in</option><option>ft</option></select>
-    			<input type="button" name="calculate" value="Magic" />
-    			</form>
-    		</div>
-    		<div id="result"></div>
-    	</div>
-    </body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="shared/style/headers.css">
+    <link rel="stylesheet" type="text/css" href="shared/fonts.css">
+    <link rel="stylesheet" type="text/css" href="shared/style_unstable/drawer.css">
+    <link href="shared/style/input_areas.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body role="application">
+
+  <section data-type="sidebar">
+    <header>
+      <h1>BMI Table</h1>
+    </header>
+    <nav>
+      <h2>Underweight</h2>
+      <ul>
+        <li><a>Very severely <span>&lt; 15</span></a></li>
+        <li><a>Severely <span>15 - 16</span></a></li>
+        <li><a>Normal <span>16 - 18</span></a></li>
+      </ul>
+      <h2>Normal <span>18.5 - 25</span></h2>
+      <h2>Overweight <span>25 - 30</span></h2>
+      <h2>Obese</h2>
+      <ul>
+        <li><a>Moderately <span>30 - 35</span></a></li>
+        <li><a>Severely <span>35 - 40</span></a></li>
+        <li><a>Very severely <span> &gt; 40</span></a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="drawer" role="region" class="skin-dark">
+    <header>
+      <a href="#"><span class="icon icon-add">hide sidebar</span></a>
+      <a href="#drawer"><span class="icon icon-add">show sidebar</span></a>
+      <h1>BMI Calculator</h1>
+    </header>
+    <div role="main">
+      <form>
+        <p>
+          <input type="text" placeholder="Placeholder" required="">
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+    </div>
+  </section>
+  </body>
 </html>
