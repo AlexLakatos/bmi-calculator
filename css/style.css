@@ -36,6 +36,44 @@ section[data-type="sidebar"] span {
   right: 2rem;
 }
 
+/*section[data-type="sidebar"] nav {
+  display: none;
+}*/
+
+form p input + button[type="reset"], form p textarea + button[type="reset"] {
+  margin: 0 1rem 0 0;
+}
+
+select {
+  -moz-box-sizing: border-box;
+  background: url("input_areas/images/ui/shadow.png") repeat-x scroll 0 0 #FFFFFF;
+  border: 0.1rem solid #CCCCCC;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+  box-shadow: none;
+  display: block;
+  font-size: 1.8rem;
+  height: 4rem;
+  line-height: 4rem;
+  overflow: hidden;
+  padding: 1rem 0 0;
+  resize: none;
+  width: 100%;
+}
+
+
+p > input {
+    float: left;
+    margin: 1rem;
+    width: calc(50% + 4rem) !important;
+}
+
+p > select {
+    float: left;
+    margin: 1rem;
+    width: calc(50% - 10rem) !important;
+    text-align: center;
+}
+
 #drawer p {
   height: calc(100%);
   margin: 0;
@@ -46,4 +84,13 @@ section[data-type="sidebar"] span {
 
 #drawer p img {
   margin-top: 20%;
+}
+
+.clear {
+  clear: both;
+}
+
+.danger {
+  position: absolute;
+  bottom: -1rem;
 }

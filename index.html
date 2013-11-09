@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <title>BMI Calculator</title>
     <link rel="stylesheet" type="text/css" href="shared/style/headers.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/buttons.css">
     <link rel="stylesheet" type="text/css" href="shared/fonts.css">
     <link rel="stylesheet" type="text/css" href="shared/style_unstable/drawer.css">
     <link href="shared/style/input_areas.css" rel="stylesheet" type="text/css">
+    <link href="shared/style_unstable/value_selector.css" rel="stylesheet" type="text/css">
+    <link href="shared/style/confirm.css" rel="stylesheet" type="text/css">
+
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/main.js"></script>
@@ -15,9 +19,57 @@
 
   <section data-type="sidebar">
     <header>
-      <h1>BMI Table</h1>
+      <h1>Additional Info</h1>
     </header>
     <nav>
+      <ul>
+        <li id="about-bmi"><a>About BMI</a></li>
+        <li id="about-bmr"><a>About BMR</a></li>
+        <li id="bmi-table"><a>BMI Table</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="drawer" role="region" class="skin-dark">
+    <header>
+      <a href="#"><span class="icon icon-add">hide sidebar</span></a>
+      <a href="#drawer"><span class="icon icon-add">show sidebar</span></a>
+      <h1>BMI Calculator</h1>
+    </header>
+    <div role="main">
+      <form>
+        <p>
+          <input type="number" placeholder="Weight" required="">
+
+          <select>
+            <option>kg</option>
+            <option>lbs</option>
+            <option>st</option>
+          </select>
+
+          <input type="number" placeholder="Height" required="">
+
+          <select>
+            <option>m</option>
+            <option>in</option>
+            <option>ft</option>
+          </select>
+
+          <input type="number" placeholder="Age" required="">
+
+          <select>
+            <option>male</option>
+            <option>female</option>
+          </select>
+        </p>
+        <div class="clear"></div>
+      </form>
+      <button class="danger">Calculate</button>
+    </div>
+    <form role="dialog" data-type="confirm">
+  <section>
+    <h1>Confirmation</h1><!-- this heading is optional -->
+    <nav id="extended-bmi-table">
       <h2>Underweight</h2>
       <ul>
         <li><a>Very severely <span>&lt; 15</span></a></li>
@@ -33,22 +85,28 @@
         <li><a>Very severely <span> &gt; 40</span></a></li>
       </ul>
     </nav>
-  </section>
 
-  <section id="drawer" role="region" class="skin-dark">
-    <header>
-      <a href="#"><span class="icon icon-add">hide sidebar</span></a>
-      <a href="#drawer"><span class="icon icon-add">show sidebar</span></a>
-      <h1>BMI Calculator</h1>
-    </header>
-    <div role="main">
-      <form>
-        <p>
-          <input type="text" placeholder="Placeholder" required="">
-          <button type="reset">Clear</button>
-        </p>
-      </form>
-    </div>
+    <nav id="extended-about-bmr">
+      <ul>
+        <li>Basal metabolic rate (BMR), and the closely related resting metabolic rate (RMR), is the amount of energy expended daily by humans and other animals at rest. Rest is defined as existing in a neutrally temperate environment while in the post-absorptive state. In plants, different considerations apply.
+
+The release, and using, of energy in this state is sufficient only for the functioning of the vital organs, the heart, lungs, nervous system, kidneys, liver, intestine, sex organs, muscles, and skin.</li>
+      </ul>
+    </nav>
+
+    <nav id="extended-about-bmi">
+      <ul>
+        <li><a>The body mass index (BMI), or Quetelet index, is a measure for human body shape based on an individual's mass and height.
+
+Devised between 1830 and 1850 by the Belgian polymath Adolphe Quetelet during the course of developing "social physics",[2] it is defined as the individual's body mass divided by the square of their height.</a></li>
+      </ul>
+    </nav>
+  </section>
+  <menu>
+    <button>Cancel</button>
+    <button class="danger">Delete</button>
+  </menu>
+</form>
   </section>
   </body>
 </html>

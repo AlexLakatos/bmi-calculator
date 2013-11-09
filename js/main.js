@@ -32,7 +32,7 @@ function calculate() {
 				default:
 					return false;
 			}
-		case 'lb':
+		case 'lbs':
 			switch(heightUnit) {
 				case 'm':
 					return calculateBmi(weight, height * 39.3700787, 2);
